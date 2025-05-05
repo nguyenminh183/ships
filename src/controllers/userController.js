@@ -18,12 +18,8 @@ exports.registerUser = async (req, res, next) => {
       });
     }
 
-    // Generate user_id (format: USER + timestamp)
-    const user_id = 'USER' + Date.now();
-
-    // Create user
+    // Create user (không cần user_id)
     const user = await User.create({
-      user_id,
       name,
       email,
       password,
