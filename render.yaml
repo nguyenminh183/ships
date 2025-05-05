@@ -2,8 +2,10 @@ services:
   - type: web
     name: ships-backend
     env: node
+    rootDir: .
     buildCommand: npm install
     startCommand: npm start
+    nodeVersion: 18.17.0
     envVars:
       - key: NODE_ENV
         value: production
